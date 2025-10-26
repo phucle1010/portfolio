@@ -26,8 +26,8 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     type: "website",
-    url: "https://your-portfolio-url.com",
-    title: "Le The Phuc – Software Developer Portfolio",
+    url: "https://puckee.vercel.app",
+    title: "Le The Phuc - Software Developer Portfolio",
     description:
       "Portfolio of Le The Phuc, showcasing projects, skills, and experience as a Frontend and Full-Stack Software Developer.",
     siteName: "Le The Phuc Portfolio",
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
       "Portfolio of Le The Phuc, showcasing projects, skills, and experience as a Frontend and Full-Stack Software Developer.",
     images: ["/opengraph-image.png"],
   },
-  metadataBase: new URL("https://your-portfolio-url.com"),
+  metadataBase: new URL("https://puckee.vercel.app"),
   robots: {
     follow: true,
     index: true,
@@ -55,7 +55,6 @@ export const metadata: Metadata = {
     "max-image-preview": "large",
     "max-video-preview": -1,
   },
-  themeColor: "#0a0f1e",
   icons: {
     icon: [
       { url: "/favicon.svg", type: "image/svg+xml" },

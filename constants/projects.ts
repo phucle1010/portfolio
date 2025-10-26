@@ -14,6 +14,11 @@ export const projects = [
       "Config package file for some applications by Power Shell",
     ],
     technologies: ["React.js", "SignalR", "Bootstrap (C#)"],
+    images: [
+      "/images/projects/warp/1.png",
+      "/images/projects/warp/2.png",
+      "/images/projects/warp/3.png",
+    ],
   },
   {
     title: "Magicblocks AI",
@@ -41,6 +46,11 @@ export const projects = [
       "MongoDB",
       "Cloudflare",
     ],
+    images: [
+      "/images/projects/magicblocks/1.png",
+      "/images/projects/magicblocks/2.png",
+      "/images/projects/magicblocks/3.png",
+    ],
   },
   {
     title: "Tinda",
@@ -65,6 +75,11 @@ export const projects = [
       "Docker",
       "Cloudflare R2",
       "Twilio",
+    ],
+    images: [
+      "/images/projects/tinda/1.png",
+      "/images/projects/tinda/2.png",
+      "/images/projects/tinda/3.png",
     ],
   },
   {
@@ -92,33 +107,43 @@ export const projects = [
       "Docker",
       "Cloudflare",
     ],
-  },
-  {
-    title: "Game Application",
-    company: "Freelance",
-    period: "12/2022 - 07/2023",
-    type: "Contract",
-    position: "Full Stack Developer",
-    description:
-      "Built a multiplayer gaming platform with real-time play, secure cash transactions, low-latency Socket.io, and seamless integration with external services.",
-    responsibilities: [
-      "Build and optimize the complex UI components using Next.js, NextAuth.js, and Tailwind CSS, enhancing performance and maintainability",
-      "Design database flow with MySQL and MongoDB",
-      "Build RESTful APIs with Node.js and Socket.io, reducing real-time latency by 150ms, leading to smoother and faster interactions",
-      "Config Firebase to store files",
-      "Setup Seamless APIs for integrating to another platform",
-      "Setup and manage project deployments by using aaPanel, ensuring reliable server management and maintenance",
-    ],
-    technologies: [
-      "Next.js",
-      "NextAuth.js",
-      "Socket.io",
-      "Node.js",
-      "MySQL",
-      "MongoDB",
-      "Firebase",
+    images: [
+      "/images/projects/block24/1.png",
+      "/images/projects/block24/2.png",
+      "/images/projects/block24/3.png",
     ],
   },
+  // {
+  //   title: "Game Application",
+  //   company: "Freelance",
+  //   period: "12/2022 - 07/2023",
+  //   type: "Contract",
+  //   position: "Full Stack Developer",
+  //   description:
+  //     "Built a multiplayer gaming platform with real-time play, secure cash transactions, low-latency Socket.io, and seamless integration with external services.",
+  //   responsibilities: [
+  //     "Build and optimize the complex UI components using Next.js, NextAuth.js, and Tailwind CSS, enhancing performance and maintainability",
+  //     "Design database flow with MySQL and MongoDB",
+  //     "Build RESTful APIs with Node.js and Socket.io, reducing real-time latency by 150ms, leading to smoother and faster interactions",
+  //     "Config Firebase to store files",
+  //     "Setup Seamless APIs for integrating to another platform",
+  //     "Setup and manage project deployments by using aaPanel, ensuring reliable server management and maintenance",
+  //   ],
+  //   technologies: [
+  //     "Next.js",
+  //     "NextAuth.js",
+  //     "Socket.io",
+  //     "Node.js",
+  //     "MySQL",
+  //     "MongoDB",
+  //     "Firebase",
+  //   ],
+  //   images: [
+  //     "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=800&h=600&fit=crop",
+  //     "https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=800&h=600&fit=crop",
+  //     "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800&h=600&fit=crop",
+  //   ],
+  // },
   {
     title: "Order Food - Cardwatch POS",
     company: "Cardwatch",
@@ -134,5 +159,10 @@ export const projects = [
       "Research and integrate CPOS printer support, allowing seamless transaction printing directly from the platform",
     ],
     technologies: ["Next.js", "PWA", "Java", "PostgreSQL", "Docker", "Nginx"],
+    images: [
+      "/images/projects/cardwatch/1.png",
+      "/images/projects/cardwatch/2.png",
+      "/images/projects/cardwatch/3.png",
+    ],
   },
 ];
