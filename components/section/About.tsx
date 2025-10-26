@@ -1,9 +1,9 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { motion } from "motion/react";
 import { useInView } from "motion/react";
-import { Download } from "lucide-react";
+import { Download, Loader2 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { about } from "@/constants/about";
@@ -11,6 +11,27 @@ import { about } from "@/constants/about";
 export function About() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+
+  const [isDownloading, setIsDownloading] = useState(false);
+
+  const handleDownloadCV = async () => {
+    try {
+      setIsDownloading(true);
+
+      const response = await fetch("/api/download-cv");
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "Le_The_Phuc_Developer.pdf";
+      a.click();
+      window.URL.revokeObjectURL(url);
+    } catch (error) {
+      console.error("Error downloading CV:", error);
+    } finally {
+      setIsDownloading(false);
+    }
+  };
 
   return (
     <section id="about" className="py-20 md:py-32 px-6 lg:px-20 relative">
@@ -54,9 +75,17 @@ export function About() {
               </p>
             </div>
 
-            <Button className="group relative w-full bg-gradient-to-r from-pink-500 via-purple-500 to-purple-600 hover:shadow-[0_0_40px_rgba(168,85,247,0.5)] transition-all duration-300 py-5 md:py-6 rounded-xl overflow-hidden border-0">
+            <Button
+              className="group relative w-full bg-gradient-to-r from-pink-500 via-purple-500 to-purple-600 hover:shadow-[0_0_40px_rgba(168,85,247,0.5)] transition-all duration-300 py-5 md:py-6 rounded-xl overflow-hidden border-0"
+              onClick={handleDownloadCV}
+              disabled={isDownloading}
+            >
               <span className="relative z-10 flex items-center justify-center gap-2 text-sm md:text-base">
-                <Download className="w-4 h-4 md:w-5 md:h-5" />
+                {isDownloading ? (
+                  <Loader2 className="w-4 h-4 md:w-5 md:h-5 animate-spin" />
+                ) : (
+                  <Download className="w-4 h-4 md:w-5 md:h-5" />
+                )}
                 Download CV
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-pink-600 via-purple-600 to-purple-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
