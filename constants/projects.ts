@@ -21,8 +21,8 @@ export const projects = [
     ],
   },
   {
-    title: "Magicblocks AI",
-    company: "Hiptech Solution",
+    title: "Magicblocks AI Chatbot",
+    company: "MagicBlocks, Inc.",
     period: "03/2024 - 06/2025",
     type: "Full time",
     position: "Full Stack Developer",
@@ -53,11 +53,11 @@ export const projects = [
     ],
   },
   {
-    title: "Tinda",
-    company: "Azubi",
+    title: "Tinda Job",
+    company: "AZUBI IN GERMANY",
     period: "12/2024 - 04/2025",
     type: "Contract",
-    position: "Frontend Developer - Project Manager",
+    position: "Mobile Developer - Project Manager",
     description:
       "Led development and project management for a mobile app connecting companies and job seekers, using Agile methodology and React Native.",
     responsibilities: [
