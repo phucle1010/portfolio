@@ -62,6 +62,7 @@ export function Skills() {
                           src={skill.iconUrl}
                           alt={`${skill.name} logo`}
                           className="w-12 h-12 md:w-16 md:h-16"
+                          loading="lazy"
                         />
                       </div>
                       <span className="text-gray-300 text-center text-xs md:text-sm">
