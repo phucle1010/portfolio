@@ -16,6 +16,8 @@ const eslintConfig = defineConfig([
   {
     rules: {
       "@typescript-eslint/no-explicit-any": "off",
+      "@next/next/no-sync-scripts": "off",
+      "@typescript-eslint/ban-ts-comment": "off",
     },
   },
 ]);

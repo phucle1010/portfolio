@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Roboto } from "next/font/google";
 import "./globals.css";
+import { WIDGET_SETTING } from "@/constants/widget";
 
 const roboto = Roboto({
   variable: "--font-roboto",
@@ -150,6 +151,44 @@ export default function RootLayout({
         className={`${roboto.variable} antialiased bg-[#0a0f1e] text-white min-h-screen`}
       >
         {children}
+
+        <script
+          type="module"
+          src="https://widget.magicblocks.com/embed/widget.js"
+        />
+
+        {/* Magicblocks Widget */}
+        {/* @ts-ignore - custom web component */}
+        <magicblocks-widget
+          id={WIDGET_SETTING.id}
+          workspace_id={WIDGET_SETTING.workspace_id}
+          experience_id={WIDGET_SETTING.experience_id}
+          widget_style={WIDGET_SETTING.widget_style}
+          mode={WIDGET_SETTING.mode}
+          root_class_name={WIDGET_SETTING.root_class_name}
+          className="mbw-standard"
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                if (typeof window !== 'undefined' && !window.MAGICBLOCKS) {
+                  window.MAGICBLOCKS = {
+                    workspace: ${WIDGET_SETTING.workspace_id},
+                    experience: ${WIDGET_SETTING.experience_id},
+                    config: { style: ${WIDGET_SETTING.widget_style} }
+                  };
+                  var queryPath = '?ws=' + window.MAGICBLOCKS.workspace + '&e=' + window.MAGICBLOCKS.experience;
+                  var s = document.createElement('script');
+                  s.id = 'mbw-script';
+                  s.type = 'text/javascript';
+                  s.src = 'https://scripts.magicblocks.com/widget/1.0.0' + queryPath;
+                  document.head.appendChild(s);
+                }
+              })();
+            `,
+          }}
+        />
       </body>
     </html>
   );
