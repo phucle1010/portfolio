@@ -25,53 +25,47 @@ export function Projects() {
           PROJECTS & EXPERIENCE
         </motion.h2>
 
-        <div className="space-y-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {projects.map((project, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 50 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
               transition={{ duration: 0.8, delay: index * 0.1 }}
-              className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 md:p-8 hover:bg-white/10 hover:border-purple-500/30 transition-all duration-300 hover:-translate-y-1"
+              className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-purple-500/30 hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-purple-500/10 transition-all duration-300 hover:-translate-y-1 flex flex-col"
             >
-              <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4 mb-4">
-                <div className="flex-1">
-                  <h3 className="text-white mb-2 text-lg md:text-xl">
-                    {project.title}
-                  </h3>
-                  <div className="flex flex-wrap items-center gap-3 md:gap-4 text-xs md:text-sm text-gray-400">
-                    <div className="flex items-center gap-2">
-                      <Building2 className="w-4 h-4 flex-shrink-0" />
-                      <span>{project.company}</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Calendar className="w-4 h-4 flex-shrink-0" />
-                      <span>{project.period}</span>
-                    </div>
-                    <Badge className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 text-white text-xs">
-                      {project.position}
-                    </Badge>
+              {/* Header */}
+              <div className="mb-4">
+                <h3 className="text-white mb-3 text-xl font-semibold group-hover:text-purple-300 transition-colors duration-300">
+                  {project.title}
+                </h3>
+
+                <div className="space-y-2 mb-4">
+                  <div className="flex items-center gap-2 text-sm text-gray-400">
+                    <Building2 className="w-4 h-4 flex-shrink-0" />
+                    <span>{project.company}</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-sm text-gray-400">
+                    <Calendar className="w-4 h-4 flex-shrink-0" />
+                    <span>{project.period}</span>
                   </div>
                 </div>
+
+                <Badge className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 text-white">
+                  {project.position}
+                </Badge>
               </div>
 
-              <p className="text-gray-400 mb-4 leading-relaxed text-sm md:text-base">
+              {/* Description */}
+              <p className="text-gray-400 text-sm mb-4 leading-relaxed flex-1">
                 {project.description}
               </p>
 
-              <div className="mb-4">
-                <h4 className="text-white text-sm mb-2">
-                  Key Responsibilities:
-                </h4>
-                <ul className="list-disc list-inside space-y-1 text-gray-500 text-xs md:text-sm">
-                  {project.responsibilities.map((resp, idx) => (
-                    <li key={idx}>{resp}</li>
-                  ))}
-                </ul>
-              </div>
-
+              {/* Technologies */}
               <div>
-                <h4 className="text-white text-sm mb-2">Technologies:</h4>
+                <h4 className="text-white text-xs mb-3 font-medium tracking-wider uppercase">
+                  Stack
+                </h4>
                 <div className="flex flex-wrap gap-2">
                   {project.technologies.map((tech, techIndex) => (
                     <Badge
