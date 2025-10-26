@@ -5,7 +5,8 @@ export const projects = [
     period: "07/2025 - Present",
     type: "Full time",
     position: "Frontend Developer",
-    description: "Build system for allow install application from website.",
+    description:
+      "Developed a web-based app installer with real-time SignalR updates and deep integration to a C# backend. Delivered fast and user-friendly enterprise deployments.",
     responsibilities: [
       "Build UI and setup source",
       "Handle realtime connection by SignalR",
@@ -21,7 +22,7 @@ export const projects = [
     type: "Full time",
     position: "Full Stack Developer",
     description:
-      "Build and provide AI bot services for websites in embedded form",
+      "Engineered an embeddable AI chatbot platform with strong authentication, multi-channel agent support, and performance optimization using Cloudflare and Vercel.",
     responsibilities: [
       "Build local shared packages like database and interfaces",
       "Implement and improve UI/UX",
@@ -48,7 +49,7 @@ export const projects = [
     type: "Contract",
     position: "Frontend Developer - Project Manager",
     description:
-      "Build mobile application for a center that connects between companies and job seekers.",
+      "Led development and project management for a mobile app connecting companies and job seekers, using Agile methodology and React Native.",
     responsibilities: [
       "Work directly with client and make a full plain with Agile",
       "Design system for application",
@@ -73,7 +74,7 @@ export const projects = [
     type: "Full time",
     position: "Frontend Developer",
     description:
-      "Website that connects to a huge of users and traders. It gives a lot of knowledege and experience in trading",
+      "Developed a scalable crypto trading and news platform with Next.js, integrating Web3 wallet support and focusing on speed, SEO, and UI/UX improvements.",
     responsibilities: [
       "Optimize performance in Frontend side",
       "Improve UI and UX",
@@ -99,7 +100,7 @@ export const projects = [
     type: "Contract",
     position: "Full Stack Developer",
     description:
-      "Application that supports multiple players, realtime and seamless cash. It allows to integrate to another website game platform",
+      "Built a multiplayer gaming platform with real-time play, secure cash transactions, low-latency Socket.io, and seamless integration with external services.",
     responsibilities: [
       "Build and optimize the complex UI components using Next.js, NextAuth.js, and Tailwind CSS, enhancing performance and maintainability",
       "Design database flow with MySQL and MongoDB",
@@ -125,7 +126,7 @@ export const projects = [
     type: "Full time",
     position: "Frontend Developer",
     description:
-      "Ordering food application that supports for members in the specific community",
+      "Created a modular food ordering and POS app, published a reusable UI library, and enabled seamless printing and offline PWA support.",
     responsibilities: [
       "Build codebase, code review, problem solver",
       "Lead the frontend development of a POS system used by a Canadian agency, streamlining customer management and order processing",

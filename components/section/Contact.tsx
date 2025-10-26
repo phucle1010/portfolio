@@ -115,18 +115,6 @@ export function Contact() {
             </a>
           </motion.div>
         </div>
-
-        <motion.footer
-          initial={{ opacity: 0 }}
-          animate={isInView ? { opacity: 1 } : { opacity: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="mt-20 md:mt-24 pt-8 border-t border-white/5 text-center text-gray-600 text-sm"
-        >
-          <p>
-            © {new Date().getFullYear()} Le The Phuc. Built with React &
-            Tailwind CSS.
-          </p>
-        </motion.footer>
       </div>
     </section>
   );

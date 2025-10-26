@@ -3,8 +3,9 @@
 import { Hero } from "@/components/section/Hero";
 import { About } from "@/components/section/About";
 import { Skills } from "@/components/section/Skills";
-import { Education } from "@/components/section/Education";
+// import { Education } from "@/components/section/Education";
 import { Projects } from "@/components/section/Projects";
+import { Feedback } from "@/components/section/Feedback";
 import { Contact } from "@/components/section/Contact";
 
 export default async function Home() {
@@ -13,8 +14,9 @@ export default async function Home() {
       <Hero />
       <About />
       <Skills />
-      <Education />
+      {/* <Education /> */}
       <Projects />
+      <Feedback />
       <Contact />
     </div>
   );
