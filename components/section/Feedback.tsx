@@ -4,6 +4,7 @@ import { useRef, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { useInView } from "motion/react";
 import { Quote, Building2 } from "lucide-react";
+import Image from "next/image";
 
 import { feedback } from "@/constants/feedback";
 
@@ -68,6 +69,19 @@ export function Feedback() {
                     </div>
                   </div>
                 </div>
+
+                {/* Author Image - Right Corner */}
+                {feedback[currentIndex].image && (
+                  <div className="relative w-20 h-20 rounded-full overflow-hidden border-2 border-purple-500/30 ring-2 ring-purple-500/20">
+                    <Image
+                      src={feedback[currentIndex].image}
+                      alt={feedback[currentIndex].name}
+                      fill
+                      className="object-cover"
+                      sizes="80px"
+                    />
+                  </div>
+                )}
               </div>
             </motion.div>
           </AnimatePresence>
