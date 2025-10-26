@@ -13,9 +13,9 @@ export default async function Home() {
     <div className="min-h-screen bg-[#0a0f1e] text-white overflow-x-hidden antialiased font-roboto">
       <Hero />
       <About />
-      <Skills />
       {/* <Education /> */}
       <Projects />
+      <Skills />
       <Feedback />
       <Contact />
     </div>

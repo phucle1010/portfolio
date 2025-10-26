@@ -13,7 +13,7 @@ export function Feedback() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   return (
-    <section id="feedback" className="py-16 md:py-24 px-6 lg:px-20 relative">
+    <section id="feedback" className="py-20 md:py-32 px-6 lg:px-20 relative">
       <div ref={ref}>
         <motion.h2
           initial={{ opacity: 0, y: 20 }}

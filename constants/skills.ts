@@ -1,5 +1,10 @@
 export const skills = [
-  // Leading with most popular modern frameworks
+  // Frontend
+  {
+    name: "TypeScript",
+    iconUrl:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+  },
   {
     name: "React",
     iconUrl:
@@ -11,27 +16,26 @@ export const skills = [
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
   },
   {
-    name: "TypeScript",
+    name: "Expo",
     iconUrl:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/expo/expo-original.svg",
   },
-  {
-    name: "Node.js",
-    iconUrl:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-  },
-  // State management & styling
   {
     name: "Redux",
     iconUrl:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg",
   },
+  // Backend
   {
-    name: "TailwindCSS",
+    name: "Node.js",
     iconUrl:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
   },
-  // Databases
+  {
+    name: "Prisma",
+    iconUrl:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/prisma/prisma-original.svg",
+  },
   {
     name: "MongoDB",
     iconUrl:
@@ -43,25 +47,40 @@ export const skills = [
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
   },
   {
-    name: "Firebase",
+    name: "Cloudflare",
     iconUrl:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cloudflare/cloudflare-original.svg",
   },
-  // Modern tools
+  // Tools
   {
-    name: "Prisma",
+    name: "Git",
     iconUrl:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/prisma/prisma-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
   },
-  {
-    name: "Expo",
-    iconUrl:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/expo/expo-original.svg",
-  },
-  // DevOps
   {
     name: "Docker",
     iconUrl:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
   },
+  {
+    name: "Postman",
+    iconUrl:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg",
+  },
+  {
+    name: "Swagger",
+    iconUrl:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swagger/swagger-original.svg",
+  },
+  {
+    name: "Jira",
+    iconUrl:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg",
+  },
 ];
+
+export const skillCategories = {
+  Frontend: skills.slice(0, 5),
+  Backend: skills.slice(5, 10),
+  Tools: skills.slice(10, 15),
+};

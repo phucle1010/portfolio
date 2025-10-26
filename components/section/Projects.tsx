@@ -14,7 +14,7 @@ export function Projects() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="projects" className="py-16 md:py-24 px-6 lg:px-20 relative">
+    <section id="projects" className="py-20 md:py-32 px-6 lg:px-20 relative">
       <div className="max-w-7xl mx-auto" ref={ref}>
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -32,7 +32,7 @@ export function Projects() {
               initial={{ opacity: 0, y: 50 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
               transition={{ duration: 0.8, delay: index * 0.1 }}
-              className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-purple-500/30 hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-purple-500/10 transition-all duration-300 hover:-translate-y-1 flex flex-col"
+              className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-purple-500/30 hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-purple-500/10 transition-all duration-300 flex flex-col"
             >
               <div className="mb-4">
                 <h3 className="text-white mb-3 text-xl font-semibold group-hover:text-purple-300 transition-colors duration-300">
