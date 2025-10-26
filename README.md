@@ -20,6 +20,61 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Code Formatting
+
+This project uses [Prettier](https://prettier.io/) for code formatting and [EditorConfig](https://editorconfig.org/) for consistent editor settings.
+
+**Available commands:**
+
+- `npm run format` - Format all files
+- `npm run format:check` - Check if files are formatted correctly
+
+**Files created:**
+
+- `.prettierrc` - Prettier configuration
+- `.prettierignore` - Files to ignore when formatting
+- `.editorconfig` - Editor configuration for consistent coding styles
+
+**Pre-commit hooks:**
+
+This project uses [lint-staged](https://github.com/okonet/lint-staged) with Husky to automatically:
+
+- Run ESLint with auto-fix on JavaScript/TypeScript files
+- Format all files with Prettier
+- All checks must pass before you can commit
+
+## Commit Message Convention
+
+This project follows the [Conventional Commits](https://www.conventionalcommits.org/) specification. All commit messages should follow this format:
+
+```
+<type>(<scope>): <subject>
+
+<body>
+```
+
+**Types:**
+
+- `feat`: A new feature
+- `fix`: A bug fix
+- `docs`: Documentation only changes
+- `style`: Code style changes (formatting, etc.)
+- `refactor`: Code refactoring
+- `perf`: Performance improvements
+- `test`: Adding or updating tests
+- `build`: Build system changes
+- `ci`: CI/CD changes
+- `chore`: Other changes that don't modify src or test files
+- `revert`: Reverts a previous commit
+
+**Example:**
+
+```
+feat(auth): add login functionality
+fix(api): resolve timeout issue
+docs(readme): update installation instructions
+```
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
