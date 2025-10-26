@@ -11,7 +11,7 @@ export function Contact() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="contact" className="py-16 md:py-24 px-6 lg:px-20 relative">
+    <section id="contact" className="py-20 md:py-32 px-6 lg:px-20 relative">
       <div className="max-w-7xl mx-auto" ref={ref}>
         <motion.h2
           initial={{ opacity: 0, y: 20 }}

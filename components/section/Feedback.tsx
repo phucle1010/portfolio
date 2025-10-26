@@ -4,6 +4,7 @@ import { useRef, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { useInView } from "motion/react";
 import { Quote, Building2 } from "lucide-react";
+import Image from "next/image";
 
 import { feedback } from "@/constants/feedback";
 
@@ -13,7 +14,7 @@ export function Feedback() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   return (
-    <section id="feedback" className="py-16 md:py-24 px-6 lg:px-20 relative">
+    <section id="feedback" className="py-20 md:py-32 px-6 lg:px-20 relative">
       <div ref={ref}>
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -68,6 +69,19 @@ export function Feedback() {
                     </div>
                   </div>
                 </div>
+
+                {/* Author Image - Right Corner */}
+                {feedback[currentIndex].image && (
+                  <div className="relative w-20 h-20 rounded-full overflow-hidden border-2 border-purple-500/30 ring-2 ring-purple-500/20">
+                    <Image
+                      src={feedback[currentIndex].image}
+                      alt={feedback[currentIndex].name}
+                      fill
+                      className="object-cover"
+                      sizes="80px"
+                    />
+                  </div>
+                )}
               </div>
             </motion.div>
           </AnimatePresence>
