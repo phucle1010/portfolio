@@ -10,7 +10,7 @@ export const feedback = [
   {
     name: "Sean Clark",
     role: "Founder (CTO)",
-    company: "Magicblocks AI",
+    company: "MagicBlocks, Inc.",
     message:
       "Phuc is a great engineer who’s always thinking outside the box. He jumps into tricky challenges without hesitation, and I can always count on him to figure things out—even when we’re on a tight deadline. Besides his technical chops, Phuc brings positive energy to the team and lifts the people around him. I appreciate having him on board and always look forward to working together.",
     image: "/images/projects/magicblocks/sean-clark.webp",

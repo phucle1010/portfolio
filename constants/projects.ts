@@ -1,7 +1,7 @@
 export const projects = [
   {
-    title: "Warp AI",
-    company: "Hiptech Solution",
+    title: "AI Software Stack",
+    company: "CORSAIR",
     period: "07/2025 - Present",
     type: "Full time",
     position: "Frontend Developer",
@@ -83,6 +83,37 @@ export const projects = [
     ],
   },
   {
+    title: "HYP 3",
+    company: "DTC Labs",
+    period: "04/2024 - 07/2024",
+    type: "Contract",
+    position: "Frontend Developer",
+    description:
+      "Developed a scalable crypto trading and news platform with Next.js, integrating Web3 wallet support and focusing on speed, SEO, and UI/UX improvements.",
+    responsibilities: [
+      "Lead the frontend development of a crypto trading and news platform",
+      "Integrate Privy wallet for Web3 authentication",
+      "Build UI and integrate features with Backend team",
+      "Optimize performance in Frontend side",
+      "Support team members about technical and requirements",
+    ],
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Golang",
+      "PostgreSQL",
+      "Docker",
+      "Privy Wallet",
+      "Web3",
+    ],
+    images: [
+      "/images/projects/hyp3/1.png",
+      "/images/projects/hyp3/2.png",
+      "/images/projects/hyp3/3.png",
+    ],
+  },
+  {
     title: "Block24",
     company: "TradecoinVN",
     period: "09/2023 - 03/2024",
@@ -145,8 +176,8 @@ export const projects = [
   //   ],
   // },
   {
-    title: "Order Food - Cardwatch POS",
-    company: "Cardwatch",
+    title: "Order Food",
+    company: "Cardwatch POS",
     period: "01/2022 - 11/2022",
     type: "Full time",
     position: "Frontend Developer",
