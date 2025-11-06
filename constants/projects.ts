@@ -8,10 +8,11 @@ export const projects = [
     description:
       "Developed a web-based app installer with real-time SignalR updates and deep integration to a C# backend. Delivered fast and user-friendly enterprise deployments.",
     responsibilities: [
-      "Build UI and setup source",
-      "Handle realtime connection by SignalR",
-      "Integration with Bootstrap to send and retrieve installation events",
-      "Config package file for some applications by Power Shell",
+      "Developed and maintained AngularJS components, directives, and services to implement key features of the resource management system.",
+      "Built reusable shared modules to standardize interfaces and streamline data handling across the frontend.",
+      "Implemented two-way data binding and dynamic form handling for managing employee and project data.",
+      "Created interactive charts and dashboards to visualize resource allocation, cost, and time tracking.",
+      "Collaborated closely with backend developers and UI/UX designers to improve usability and maintain consistency.",
     ],
     technologies: ["React.js", "SignalR", "Bootstrap (C#)"],
     images: [
@@ -29,12 +30,12 @@ export const projects = [
     description:
       "Engineered an embeddable AI chatbot platform with strong authentication, multi-channel agent support, and performance optimization using Cloudflare and Vercel.",
     responsibilities: [
-      "Build local shared packages like database and interfaces",
-      "Implement and improve UI/UX",
-      "Develop friendly interfaces that adapt to multiple devices like desktop, tablet and mobile",
-      "Setup and integrate channels for Agent like Twilio and Instagram",
-      "Optimize data processing by caching in Cloudflare and API request",
-      "Problem solver",
+      "Built shared modular packages including database schema and reusable interface components to support scalable development.",
+      "Implemented and improved UI/UX for interactive bot widgets.",
+      "Developed responsive interfaces optimized for desktop, tablet, and mobile.",
+      "Set up and integrated multi-channel communication for the AI Agent including Twilio and Instagram.",
+      "Optimized backend performance using Cloudflare caching and efficient API request handling, improving data delivery speed.",
+      "Acted as a key problem solver, diagnosing complex technical issues across both frontend and backend layers.",
     ],
     technologies: [
       "React.js",
@@ -61,12 +62,12 @@ export const projects = [
     description:
       "Led development and project management for a mobile app connecting companies and job seekers, using Agile methodology and React Native.",
     responsibilities: [
-      "Work directly with client and make a full plain with Agile",
-      "Design system for application",
-      "Setup working source like Github, Jira and Confluence",
-      "Setup source code for React Native app",
-      "Build UI and integrate features with Backend team",
-      "Support team members about technical and requirements",
+      "Worked directly with client stakeholders and led project planning using Agile.",
+      "Designed UI/UX system and component structure for a scalable mobile app experience.",
+      "Set up core development workflows including GitHub, Jira, and Confluence.",
+      "Built the initial React Native (Expo) codebase and prepared CI-friendly app structure.",
+      "Developed and integrated frontend features in collaboration with the backend team.",
+      "Provided technical leadership and requirement clarification to team members.",
     ],
     technologies: [
       "React Native (Expo)",
@@ -122,13 +123,13 @@ export const projects = [
     description:
       "Developed a scalable crypto trading and news platform with Next.js, integrating Web3 wallet support and focusing on speed, SEO, and UI/UX improvements.",
     responsibilities: [
-      "Optimize performance in Frontend side",
-      "Improve UI and UX",
-      "Collaborate with team members to define and improve flows to attract users",
-      "Resolve high and complex issues",
-      "Connect Web3 wallet",
-      "Clean and refactor the source for scalability",
-      "Support team members",
+      "Optimized frontend performance to ensure faster load times and smoother user interactions across devices.",
+      "Enhanced UI/UX design to improve engagement and accessibility for a global user base.",
+      "Collaborated with cross-functional teams to design intuitive user flows that attract and retain users.",
+      "Resolved complex frontend issues, ensuring stability and scalability in production environments.",
+      "Refactored and modularized existing code to improve maintainability and long-term scalability.",
+      "Implemented a Redux-based state management system for consistent data handling across components.",
+      "Supported teammates through code reviews, documentation, and technical guidance.",
     ],
     technologies: [
       "Next.js",
@@ -184,10 +185,12 @@ export const projects = [
     description:
       "Created a modular food ordering and POS app, published a reusable UI library, and enabled seamless printing and offline PWA support.",
     responsibilities: [
-      "Build codebase, code review, problem solver",
-      "Lead the frontend development of a POS system used by a Canadian agency, streamlining customer management and order processing",
-      "Build a reusable UI component library (published), reducing development time for new features by 50%",
-      "Research and integrate CPOS printer support, allowing seamless transaction printing directly from the platform",
+      "Built and optimized complex UI components using Next.js and Tailwind CSS, improving performance and maintainability.",
+      "Designed and structured scalable database flows with MySQL and MongoDB.",
+      "Developed RESTful APIs with Node.js and real-time services using Socket.io, reducing latency by 150ms for smoother gameplay.",
+      "Configured Firebase for secure file and asset storage.",
+      "Implemented integration APIs for external platform connectivity.",
+      "Managed deployment and server administration using aaPanel, ensuring reliable performance and system uptime.",
     ],
     technologies: ["Next.js", "PWA", "Java", "PostgreSQL", "Docker", "Nginx"],
     images: [

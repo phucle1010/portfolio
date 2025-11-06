@@ -17,11 +17,57 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
 } from "@/components/ui/carousel";
 
 import { projects } from "@/constants/projects";
+
+const Responsibilities = ({
+  selectedProject,
+}: {
+  selectedProject: (typeof projects)[0];
+}) => {
+  return (
+    <div>
+      <h4 className="text-white text-sm mb-3 font-medium tracking-wider uppercase">
+        Key Responsibilities
+      </h4>
+      <ul className="space-y-2">
+        {selectedProject.responsibilities.map((responsibility, respIndex) => (
+          <li key={respIndex} className="flex items-start gap-2">
+            <span className="text-purple-400">•</span>
+            <span className="text-gray-300 text-sm leading-relaxed">
+              {responsibility}
+            </span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+const Technologies = ({
+  selectedProject,
+}: {
+  selectedProject: (typeof projects)[0];
+}) => {
+  return (
+    <div className="mt-6">
+      <h4 className="text-white text-sm mb-3 font-medium tracking-wider uppercase">
+        Technologies Used
+      </h4>
+      <div className="flex flex-wrap gap-2">
+        {selectedProject.technologies.map((tech, techIndex) => (
+          <Badge
+            key={techIndex}
+            className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/20 text-gray-300 hover:text-white hover:border-purple-400/40 transition-all duration-300 text-xs"
+          >
+            {tech}
+          </Badge>
+        ))}
+      </div>
+    </div>
+  );
+};
 
 export function Projects() {
   const ref = useRef(null);
@@ -128,7 +174,7 @@ export function Projects() {
               </DialogHeader>
 
               <div className="px-6 pb-6 flex flex-col lg:flex-row gap-8 lg:gap-12">
-                <div className="relative mt-6 flex-1">
+                <div className="relative mt-6 w-full lg:w-1/2">
                   <Carousel className="w-full" setApi={setCarouselApi}>
                     <CarouselContent>
                       {selectedProject.images.map((image, imgIndex) => (
@@ -168,44 +214,13 @@ export function Projects() {
                   </div>
                 </div>
 
-                <div>
-                  {/* Responsibilities */}
+                <div className="flex-1">
                   <div className="mt-6">
-                    <h4 className="text-white text-sm mb-3 font-medium tracking-wider uppercase">
-                      Key Responsibilities
-                    </h4>
-                    <ul className="space-y-2">
-                      {selectedProject.responsibilities.map(
-                        (responsibility, respIndex) => (
-                          <li
-                            key={respIndex}
-                            className="flex items-start gap-2"
-                          >
-                            <span className="text-purple-400 mt-1">•</span>
-                            <span className="text-gray-300 text-sm leading-relaxed">
-                              {responsibility}
-                            </span>
-                          </li>
-                        )
-                      )}
-                    </ul>
+                    <Responsibilities selectedProject={selectedProject} />
                   </div>
 
-                  {/* Technologies */}
                   <div className="mt-6">
-                    <h4 className="text-white text-sm mb-3 font-medium tracking-wider uppercase">
-                      Technologies Used
-                    </h4>
-                    <div className="flex flex-wrap gap-2">
-                      {selectedProject.technologies.map((tech, techIndex) => (
-                        <Badge
-                          key={techIndex}
-                          className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/20 text-gray-300 hover:text-white hover:border-purple-400/40 transition-all duration-300 text-xs"
-                        >
-                          {tech}
-                        </Badge>
-                      ))}
-                    </div>
+                    <Technologies selectedProject={selectedProject} />
                   </div>
                 </div>
               </div>
