@@ -164,22 +164,22 @@ export function Projects() {
 
       {/* Dialog for Zoomed Image */}
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
-        <DialogContent className="max-w-[90vw] lg:max-w-[95vw] xl:max-w-[96vw] max-h-[95vh] bg-[#0a0f1e] border-white/10 p-0 overflow-y-auto">
+        <DialogContent className="max-w-[95vw] sm:max-w-[90vw] lg:max-w-[95vw] xl:max-w-[96vw] max-h-[95vh] sm:max-h-[90vh] bg-[#0a0f1e] border-white/10 p-0 overflow-hidden flex flex-col">
           {selectedProject && (
             <>
-              <DialogHeader className="px-6 pt-6 sticky top-0 bg-[#0a0f1e] z-10 border-b border-white/10 pb-4">
-                <DialogTitle className="text-white text-2xl">
+              <DialogHeader className="px-4 sm:px-6 pt-4 sm:pt-6 flex-shrink-0 bg-[#0a0f1e] border-b border-white/10 pb-4">
+                <DialogTitle className="text-white text-xl sm:text-2xl">
                   {selectedProject.title}
                 </DialogTitle>
               </DialogHeader>
 
-              <div className="px-6 pb-6 flex flex-col lg:flex-row gap-8 lg:gap-12">
-                <div className="relative mt-6 w-full lg:w-1/2">
+              <div className="flex-1 overflow-y-auto px-4 sm:px-6 pb-6 flex flex-col lg:flex-row gap-6 lg:gap-12">
+                <div className="relative mt-4 lg:mt-6 w-full lg:w-1/2 flex-shrink-0">
                   <Carousel className="w-full" setApi={setCarouselApi}>
                     <CarouselContent>
                       {selectedProject.images.map((image, imgIndex) => (
                         <CarouselItem key={imgIndex}>
-                          <div className="relative w-full h-[350px] lg:h-[500px] rounded-lg overflow-hidden bg-black/20">
+                          <div className="relative w-full h-[250px] sm:h-[350px] lg:h-[500px] rounded-lg overflow-hidden bg-black/20">
                             <Image
                               src={image}
                               alt={`${selectedProject.title} - Image ${
@@ -196,11 +196,11 @@ export function Projects() {
                   </Carousel>
 
                   {/* Thumbnail Navigation */}
-                  <div className="flex gap-2 mt-4 justify-center overflow-x-auto pb-2 max-h-auto">
+                  <div className="flex gap-2 mt-4 justify-center overflow-x-auto pb-2 scrollbar-hide">
                     {selectedProject.images.map((image, imgIndex) => (
                       <div
                         key={imgIndex}
-                        className="relative w-20 h-20 rounded-lg overflow-hidden cursor-pointer transition-transform duration-300 flex-shrink-0 border-2 border-transparent hover:border-purple-500"
+                        className="relative w-16 h-16 sm:w-20 sm:h-20 rounded-lg overflow-hidden cursor-pointer transition-transform duration-300 flex-shrink-0 border-2 border-transparent hover:border-purple-500 active:border-purple-500"
                         onClick={() => setSelectedImageIndex(imgIndex)}
                       >
                         <Image
@@ -214,8 +214,8 @@ export function Projects() {
                   </div>
                 </div>
 
-                <div className="flex-1">
-                  <div className="mt-6">
+                <div className="flex-1 min-w-0">
+                  <div className="mt-4 lg:mt-6">
                     <Responsibilities selectedProject={selectedProject} />
                   </div>
 

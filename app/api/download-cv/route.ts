@@ -3,7 +3,7 @@ import path from "path";
 import { promises as fs } from "fs";
 
 export async function GET() {
-  const fileName = "Le_The_Phuc_Software_Developer.pdf";
+  const fileName = "Le_The_Phuc_Software_Engineer.pdf";
   const filePath = path.join(process.cwd(), "public", "pdf", fileName);
 
   try {
