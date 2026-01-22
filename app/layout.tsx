@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   description:
     "Portfolio of Le The Phuc, a Frontend & Full-Stack Developer specializing in React, Next.js, Node.js, and MySQL. Based in Ho Chi Minh City. Building scalable web applications and turning ideas into working products.",
   applicationName: "Le The Phuc",
-  authors: [{ name: "Le The Phuc", url: "https://pucklee.vercel.app" }],
+  authors: [{ name: "Le The Phuc", url: "https://pucklee.io.vn" }],
   creator: "Le The Phuc",
   publisher: "Le The Phuc",
   keywords: [
@@ -43,32 +43,32 @@ export const metadata: Metadata = {
   classification: "Portfolio Website",
   openGraph: {
     type: "website",
-    url: "https://pucklee.vercel.app",
-    title: "Le The Phuc - Software Developer Portfolio",
+    url: "https://pucklee.io.vn",
+    title: "Le The Phuc - Software Developer",
     description:
       "Portfolio of Le The Phuc, a Frontend & Full-Stack Developer specializing in React, Next.js, Node.js, and MySQL. Building scalable web applications based in Ho Chi Minh City.",
-    siteName: "Le The Phuc Portfolio",
+    siteName: "Le The Phuc",
     locale: "en_US",
     images: [
       {
         url: "/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "Le The Phuc - Software Developer Portfolio",
+        alt: "Le The Phuc - Software Developer",
         type: "image/png",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Le The Phuc - Software Developer Portfolio",
+    title: "Le The Phuc - Software Developer",
     description:
       "Frontend & Full-Stack Developer specializing in React, Next.js, Node.js, and MySQL. Based in Ho Chi Minh City.",
     images: ["/opengraph-image.png"],
   },
-  metadataBase: new URL("https://pucklee.vercel.app"),
+  metadataBase: new URL("https://pucklee.io.vn"),
   alternates: {
-    canonical: "https://pucklee.vercel.app",
+    canonical: "https://pucklee.io.vn",
   },
   robots: {
     index: true,
@@ -108,7 +108,7 @@ export default function RootLayout({
     "@type": "Person",
     name: "Le The Phuc",
     jobTitle: "Frontend & Full-Stack Developer",
-    url: "https://pucklee.vercel.app",
+    url: "https://pucklee.io.vn",
     sameAs: [
       "https://www.linkedin.com/in/phuc-le-bab721189/",
       "https://github.com/phucle1010",
@@ -148,7 +148,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${roboto.variable} antialiased bg-[#0a0f1e] text-white min-h-screen`}
+        className={`${roboto.variable} antialiased bg-gradient-to-br from-[#050816] via-[#0a0f1e] to-[#050816] text-white min-h-screen`}
       >
         {children}
 

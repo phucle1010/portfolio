@@ -10,7 +10,7 @@ import { Contact } from "@/components/section/Contact";
 
 export default async function Home() {
   return (
-    <div className="min-h-screen bg-[#0a0f1e] text-white overflow-x-hidden antialiased font-roboto">
+    <div className="min-h-screen bg-gradient-to-br from-[#050816] via-[#0a0f1e] to-[#050816] text-white overflow-x-hidden antialiased font-roboto">
       <Hero />
       <About />
       {/* <Education /> */}

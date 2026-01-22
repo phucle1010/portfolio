@@ -17,10 +17,11 @@ export function Hero() {
       id="hero"
       className="relative min-h-screen flex items-center justify-center px-6 lg:px-20 overflow-hidden"
     >
-      {/* Background effects */}
+      {/* Background effects - Web3 dark gradient */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 right-1/4 w-[600px] h-[600px] bg-purple-600 rounded-full mix-blend-multiply filter blur-[150px] opacity-10"></div>
-        <div className="absolute bottom-1/4 left-1/4 w-[600px] h-[600px] bg-pink-600 rounded-full mix-blend-multiply filter blur-[150px] opacity-10"></div>
+        <div className="absolute top-1/4 right-1/4 w-[600px] h-[600px] bg-cyan-500/20 rounded-full mix-blend-screen filter blur-[150px] opacity-30 animate-pulse"></div>
+        <div className="absolute bottom-1/4 left-1/4 w-[600px] h-[600px] bg-blue-500/15 rounded-full mix-blend-screen filter blur-[150px] opacity-25"></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-teal-500/10 rounded-full mix-blend-screen filter blur-[200px] opacity-20"></div>
       </div>
 
       {/* Content */}
@@ -35,7 +36,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="mb-4 md:mb-6 bg-gradient-to-r from-pink-500 via-purple-500 to-purple-600 bg-clip-text text-transparent text-4xl md:text-6xl lg:text-7xl"
+            className="mb-4 md:mb-6 bg-gradient-to-r from-cyan-400 via-teal-400 to-blue-500 bg-clip-text text-transparent text-4xl md:text-6xl lg:text-7xl"
           >
             {hero.headline} <span className="block">{hero.name}</span>
           </motion.h1>
@@ -65,17 +66,17 @@ export function Hero() {
           >
             <Button
               onClick={() => scrollToSection("projects")}
-              className="group relative bg-gradient-to-r from-pink-500 via-purple-500 to-purple-600 hover:shadow-[0_0_40px_rgba(168,85,247,0.5)] transition-all duration-300 px-6 md:px-8 py-5 md:py-6 rounded-xl overflow-hidden border-0 text-sm md:text-base"
+              className="group relative bg-gradient-to-r from-cyan-500/90 via-teal-500/90 to-blue-500/90 hover:from-cyan-400 hover:via-teal-400 hover:to-blue-400 hover:shadow-[0_0_40px_rgba(6,182,212,0.4)] transition-all duration-300 px-6 md:px-8 py-5 md:py-6 rounded-xl overflow-hidden border border-cyan-500/30 text-sm md:text-base backdrop-blur-sm"
             >
               <span className="relative z-10">{hero.seeMyWork}</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-pink-600 via-purple-600 to-purple-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 via-teal-400 to-blue-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </Button>
             <Button
               onClick={() => scrollToSection("contact")}
-              className="group relative bg-gradient-to-r from-pink-500 via-purple-500 to-purple-600 hover:shadow-[0_0_40px_rgba(168,85,247,0.5)] transition-all duration-300 px-6 md:px-8 py-5 md:py-6 rounded-xl overflow-hidden border-0 text-sm md:text-base"
+              className="group relative bg-gradient-to-r from-cyan-500/90 via-teal-500/90 to-blue-500/90 hover:from-cyan-400 hover:via-teal-400 hover:to-blue-400 hover:shadow-[0_0_40px_rgba(6,182,212,0.4)] transition-all duration-300 px-6 md:px-8 py-5 md:py-6 rounded-xl overflow-hidden border border-cyan-500/30 text-sm md:text-base backdrop-blur-sm"
             >
               <span className="relative z-10">{hero.getInTouch}</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-pink-600 via-purple-600 to-purple-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 via-teal-400 to-blue-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </Button>
           </motion.div>
         </motion.div>
@@ -87,9 +88,9 @@ export function Hero() {
           className="flex justify-center lg:justify-end"
         >
           <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96">
-            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-purple-500 via-purple-600 to-pink-500 p-1">
-              <div className="w-full h-full rounded-full bg-[#0a0f1e] flex items-center justify-center">
-                <div className="w-[92%] h-[92%] rounded-full bg-gradient-to-br from-purple-900/40 to-pink-900/40 flex items-center justify-center overflow-hidden">
+            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-cyan-500/50 via-teal-500/50 to-blue-500/50 p-1 animate-pulse">
+              <div className="w-full h-full rounded-full bg-gradient-to-br from-[#050816] via-[#0a0f1e] to-[#050816] flex items-center justify-center">
+                <div className="w-[92%] h-[92%] rounded-full bg-gradient-to-br from-cyan-900/20 via-teal-900/20 to-blue-900/20 flex items-center justify-center overflow-hidden backdrop-blur-sm">
                   <div className="w-full h-full overflow-hidden rounded-full">
                     <Image
                       src={hero.profileImage.src}
