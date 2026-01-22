@@ -40,14 +40,14 @@ export function Contact() {
           >
             <a
               href="mailto:lethephuc2002@gmail.com"
-              className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 md:p-8 hover:bg-white/10 hover:border-purple-500/30 transition-all duration-300 hover:-translate-y-1 flex items-start gap-4"
+              className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 md:p-8 hover:bg-white/10 hover:border-cyan-500/30 transition-all duration-300 hover:-translate-y-1 flex items-start gap-4"
             >
-              <div className="p-3 bg-gradient-to-br from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-xl text-purple-400 flex-shrink-0">
+              <div className="p-3 bg-gradient-to-br from-cyan-500/20 via-teal-500/20 to-blue-500/20 border border-cyan-500/30 rounded-xl text-cyan-400 flex-shrink-0">
                 <Mail className="w-5 h-5 md:w-6 md:h-6" />
               </div>
               <div className="flex-1 min-w-0">
                 <p className="text-sm text-gray-500 mb-1">Email</p>
-                <p className="text-gray-300 group-hover:text-purple-400 transition-colors break-all">
+                <p className="text-gray-300 group-hover:text-cyan-400 transition-colors break-all">
                   {contact.email}
                 </p>
               </div>
@@ -55,26 +55,28 @@ export function Contact() {
 
             <a
               href="tel:+84368341595"
-              className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 md:p-8 hover:bg-white/10 hover:border-purple-500/30 transition-all duration-300 hover:-translate-y-1 flex items-start gap-4"
+              className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 md:p-8 hover:bg-white/10 hover:border-cyan-500/30 transition-all duration-300 hover:-translate-y-1 flex items-start gap-4"
             >
-              <div className="p-3 bg-gradient-to-br from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-xl text-purple-400 flex-shrink-0">
+              <div className="p-3 bg-gradient-to-br from-cyan-500/20 via-teal-500/20 to-blue-500/20 border border-cyan-500/30 rounded-xl text-cyan-400 flex-shrink-0">
                 <Phone className="w-5 h-5 md:w-6 md:h-6" />
               </div>
               <div className="flex-1 min-w-0">
                 <p className="text-sm text-gray-500 mb-1">Phone</p>
-                <p className="text-gray-300 group-hover:text-purple-400 transition-colors">
+                <p className="text-gray-300 group-hover:text-cyan-400 transition-colors">
                   {contact.phone}
                 </p>
               </div>
             </a>
 
-            <div className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 md:p-8 hover:bg-white/10 hover:border-purple-500/30 transition-all duration-300 hover:-translate-y-1 flex items-start gap-4">
-              <div className="p-3 bg-gradient-to-br from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-xl text-purple-400 flex-shrink-0">
+            <div className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 md:p-8 hover:bg-white/10 hover:border-cyan-500/30 transition-all duration-300 hover:-translate-y-1 flex items-start gap-4 cursor-pointer">
+              <div className="p-3 bg-gradient-to-br from-cyan-500/20 via-teal-500/20 to-blue-500/20 border border-cyan-500/30 rounded-xl text-cyan-400 flex-shrink-0">
                 <MapPin className="w-5 h-5 md:w-6 md:h-6" />
               </div>
               <div className="flex-1 min-w-0">
                 <p className="text-sm text-gray-500 mb-1">Location</p>
-                <p className="text-gray-300">{contact.location}</p>
+                <p className="text-gray-300 text-gray-300 group-hover:text-cyan-400 transition-colors">
+                  {contact.location}
+                </p>
               </div>
             </div>
 
@@ -82,14 +84,14 @@ export function Contact() {
               href={contact.linkedin.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 md:p-8 hover:bg-white/10 hover:border-purple-500/30 transition-all duration-300 hover:-translate-y-1 flex items-start gap-4"
+              className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 md:p-8 hover:bg-white/10 hover:border-cyan-500/30 transition-all duration-300 hover:-translate-y-1 flex items-start gap-4"
             >
-              <div className="p-3 bg-gradient-to-br from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-xl text-purple-400 flex-shrink-0">
+              <div className="p-3 bg-gradient-to-br from-cyan-500/20 via-teal-500/20 to-blue-500/20 border border-cyan-500/30 rounded-xl text-cyan-400 flex-shrink-0">
                 <Linkedin className="w-5 h-5 md:w-6 md:h-6" />
               </div>
               <div className="flex-1 min-w-0">
                 <p className="text-sm text-gray-500 mb-1">LinkedIn</p>
-                <p className="text-gray-300 group-hover:text-purple-400 transition-colors truncate">
+                <p className="text-gray-300 group-hover:text-cyan-400 transition-colors truncate">
                   {contact.linkedin.username}
                 </p>
               </div>
@@ -106,7 +108,7 @@ export function Contact() {
               href={contact.github.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 text-gray-400 hover:text-purple-400 transition-colors group"
+              className="inline-flex items-center gap-3 text-gray-400 hover:text-cyan-400 transition-colors group"
             >
               <Github className="w-5 h-5 group-hover:scale-110 transition-transform" />
               <span className="text-sm md:text-base">

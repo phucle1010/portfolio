@@ -26,11 +26,11 @@ export function Education() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 md:p-8 hover:bg-white/10 hover:border-purple-500/30 transition-all duration-300 hover:-translate-y-1"
+          className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 md:p-8 hover:bg-white/10 hover:border-cyan-500/30 transition-all duration-300 hover:-translate-y-1"
         >
           <div className="flex flex-col sm:flex-row items-start gap-4">
-            <div className="p-3 bg-gradient-to-br from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-xl flex-shrink-0">
-              <GraduationCap className="w-5 h-5 md:w-6 md:h-6 text-purple-400" />
+            <div className="p-3 bg-gradient-to-br from-cyan-500/20 via-teal-500/20 to-blue-500/20 border border-cyan-500/30 rounded-xl flex-shrink-0">
+              <GraduationCap className="w-5 h-5 md:w-6 md:h-6 text-cyan-400" />
             </div>
             <div className="flex-1">
               <h3 className="text-white mb-2 text-base md:text-lg">

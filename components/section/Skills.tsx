@@ -39,7 +39,7 @@ export function Skills() {
                   <h3 className="text-xl md:text-2xl font-semibold text-gray-300">
                     {category}
                   </h3>
-                  <div className="flex-1 h-px bg-gradient-to-r from-purple-500/50 to-transparent"></div>
+                  <div className="flex-1 h-px bg-gradient-to-r from-cyan-500/50 via-teal-500/50 to-transparent"></div>
                 </div>
 
                 {/* Skills Grid */}
@@ -55,7 +55,7 @@ export function Skills() {
                         duration: 0.4,
                         delay: categoryIndex * 0.15 + index * 0.05,
                       }}
-                      className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-purple-500/30 transition-all duration-300 flex flex-col items-center justify-center gap-3"
+                      className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-cyan-500/30 transition-all duration-300 flex flex-col items-center justify-center gap-3"
                     >
                       <div className="text-gray-400 group-hover:scale-110 transition-transform duration-300">
                         <img
