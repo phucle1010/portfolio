@@ -1,5 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Roboto } from "next/font/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
+
 import "./globals.css";
 import { WIDGET_SETTING } from "@/constants/widget";
 
@@ -190,6 +192,8 @@ export default function RootLayout({
           }}
         />
       </body>
+
+      <GoogleAnalytics gaId="G-Y7311K3WSR" />
     </html>
   );
 }
