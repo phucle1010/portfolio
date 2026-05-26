@@ -1,23 +1,14 @@
 "use server";
 
-import { Hero } from "@/components/section/Hero";
-import { About } from "@/components/section/About";
-import { Skills } from "@/components/section/Skills";
-// import { Education } from "@/components/section/Education";
-import { Projects } from "@/components/section/Projects";
-import { Feedback } from "@/components/section/Feedback";
-import { Contact } from "@/components/section/Contact";
+import { Suspense } from "react";
+
+import { GlobalLoading } from "@/components/Loading";
+import { Portfolio } from "@/components/container/Portfolio";
 
 export default async function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#050816] via-[#0a0f1e] to-[#050816] text-white overflow-x-hidden antialiased font-roboto">
-      <Hero />
-      <About />
-      {/* <Education /> */}
-      <Projects />
-      <Skills />
-      <Feedback />
-      <Contact />
-    </div>
+    <Suspense fallback={<GlobalLoading />}>
+      <Portfolio />
+    </Suspense>
   );
 }

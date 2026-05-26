@@ -36,11 +36,14 @@
   --sidebar: oklch(0.985 0 0);
   --sidebar-foreground: oklch(0.145 0 0);
   --sidebar-primary: #030213;
-  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-primary-foreground: oklch(1 0 0);
   --sidebar-accent: oklch(0.97 0 0);
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+
+  --purple-primary: #a855f7;
+  --gray-primary: #888888;
 }
 
 .dark {
@@ -78,6 +81,9 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: rgba(6, 182, 212, 0.1);
   --sidebar-ring: rgba(6, 182, 212, 0.3);
+
+  --purple-primary: #a855f7;
+  --gray-primary: #888888;
 }
 
 @theme inline {
@@ -122,6 +128,9 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --font-roboto: var(--font-roboto);
+
+  --color-purple-primary: var(--purple-primary);
+  --color-gray-primary: var(--gray-primary);
 }
 
 @layer base {
@@ -211,6 +220,13 @@ html {
 
 /* Web3 gradient utilities */
 @layer utilities {
+  .bg-grid {
+    background-size: 40px 40px;
+    background-image:
+      linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  }
+
   .gradient-web3-primary {
     background: linear-gradient(
       135deg,

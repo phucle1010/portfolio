@@ -4,6 +4,7 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 
 import "./globals.css";
 import { WIDGET_SETTING } from "@/constants/widget";
+import { ToastProvider } from "@/providers/toast";
 
 const roboto = Roboto({
   variable: "--font-roboto",
@@ -13,20 +14,20 @@ const roboto = Roboto({
 
 export const metadata: Metadata = {
   title: {
-    default: "Le The Phuc - Software Developer",
+    default: "Le The Phuc - Software Engineer",
     template: "%s | Le The Phuc",
   },
   description:
-    "Portfolio of Le The Phuc, a Frontend & Full-Stack Developer specializing in React, Next.js, Node.js, and MySQL. Based in Ho Chi Minh City. Building scalable web applications and turning ideas into working products.",
+    "Portfolio of Le The Phuc, a Frontend & Software Engineer specializing in React, Next.js, Node.js, and MySQL. Based in Ho Chi Minh City. Building scalable web applications and turning ideas into working products.",
   applicationName: "Le The Phuc",
   authors: [{ name: "Le The Phuc", url: "https://pucklee.io.vn" }],
   creator: "Le The Phuc",
   publisher: "Le The Phuc",
   keywords: [
     "Le The Phuc",
-    "Software Developer",
+    "Software Engineer",
     "Frontend Developer",
-    "Full-Stack Developer",
+    "Software Engineer",
     "React.js",
     "Next.js",
     "Node.js",
@@ -46,9 +47,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "https://pucklee.io.vn",
-    title: "Le The Phuc - Software Developer",
+    title: "Le The Phuc - Software Engineer",
     description:
-      "Portfolio of Le The Phuc, a Frontend & Full-Stack Developer specializing in React, Next.js, Node.js, and MySQL. Building scalable web applications based in Ho Chi Minh City.",
+      "Portfolio of Le The Phuc, a Frontend & Software Engineer specializing in React, Next.js, Node.js, and MySQL. Building scalable web applications based in Ho Chi Minh City.",
     siteName: "Le The Phuc",
     locale: "en_US",
     images: [
@@ -56,16 +57,16 @@ export const metadata: Metadata = {
         url: "/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "Le The Phuc - Software Developer",
+        alt: "Le The Phuc - Software Engineer",
         type: "image/png",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Le The Phuc - Software Developer",
+    title: "Le The Phuc - Software Engineer",
     description:
-      "Frontend & Full-Stack Developer specializing in React, Next.js, Node.js, and MySQL. Based in Ho Chi Minh City.",
+      "Frontend & Software Engineer specializing in React, Next.js, Node.js, and MySQL. Based in Ho Chi Minh City.",
     images: ["/opengraph-image.png"],
   },
   metadataBase: new URL("https://pucklee.io.vn"),
@@ -104,12 +105,11 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // JSON-LD structured data for SEO
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Person",
     name: "Le The Phuc",
-    jobTitle: "Frontend & Full-Stack Developer",
+    jobTitle: "Software Engineer",
     url: "https://pucklee.io.vn",
     sameAs: [
       "https://www.linkedin.com/in/phuc-le-bab721189/",
@@ -152,7 +152,7 @@ export default function RootLayout({
       <body
         className={`${roboto.variable} antialiased bg-gradient-to-br from-[#050816] via-[#0a0f1e] to-[#050816] text-white min-h-screen`}
       >
-        {children}
+        <ToastProvider>{children}</ToastProvider>
 
         <script
           type="module"
