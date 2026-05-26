@@ -91,10 +91,10 @@ export function WorkExperience() {
             <div className="p-6 md:p-8">
               <div className="mb-4">
                 <h3 className="font-['Liberation_Sans:Regular',sans-serif] text-xl md:text-[24px] leading-tight md:leading-[36px] group-hover:text-purple-primary transition-colors">
-                  Tinda Job App
+                  Job Tinda
                 </h3>
                 <p className="font-['Liberation_Sans:Regular',sans-serif] text-purple-primary text-[10px] md:text-xs uppercase leading-[15px]">
-                  MOBILE DEVELOPER @ VINPET SOLUTION
+                  MOBILE DEVELOPER @ Azubi-in-Germany
                 </p>
               </div>
 
@@ -140,7 +140,6 @@ export function WorkExperience() {
             </div>
           </div>
 
-          {/* Block24 */}
           <div className="md:col-span-6 bg-[#0f0f0f] border border-[#4d4354] overflow-hidden group hover:border-purple-primary transition-all duration-300 cursor-pointer">
             <div className="h-[250px] md:h-[307.13px] overflow-hidden">
               <img
@@ -181,7 +180,7 @@ export function WorkExperience() {
                   HRCV
                 </h3>
                 <p className="font-['Liberation_Sans:Regular',sans-serif] text-purple-primary text-[10px] md:text-xs uppercase leading-[15px]">
-                  BACKEND DEVELOPER @ HRCV
+                  BACKEND DEVELOPER @ Vinpet Solution
                 </p>
               </div>
 

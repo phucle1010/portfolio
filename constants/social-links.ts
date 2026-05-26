@@ -10,6 +10,10 @@ export const SOCIAL_LINKS = [
     url: "https://www.instagram.com/annoy1010",
     label: "Instagram",
   },
+  {
+    id: "tiktok",
+    url: "https://www.tiktok.com/@annoy.1010",
+    label: "TikTok",
+  },
   { id: "email", url: "mailto:lethephuc2002@gmail.com", label: "Email" },
-  { id: "phone-number", url: "tel:+84368341595", label: "Hotline" },
 ] as const;

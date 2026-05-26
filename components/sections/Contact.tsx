@@ -1,8 +1,16 @@
 "use client";
 
-import { Link2Icon } from "lucide-react";
+import { Github, Instagram, Linkedin, Music2 } from "lucide-react";
 import { SOCIAL_LINKS } from "@/constants/social-links";
+
 import { Label } from "../ui/label";
+
+const SOCIAL_ICONS: Record<string, any> = {
+  github: Github,
+  linkedin: Linkedin,
+  instagram: Instagram,
+  tiktok: Music2,
+};
 
 export function Contact() {
   const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -56,22 +64,20 @@ export function Contact() {
             </p>
           </div>
           <div className="flex flex-wrap gap-4 md:gap-6">
-            {SOCIAL_LINKS.filter((link) => link.id !== "email").map((link) => (
-              <a
-                key={link.id}
-                href={link.url}
-                target="_blank"
-                className="flex gap-2 items-center group cursor-pointer transition-all duration-300"
-              >
-                <Link2Icon
-                  size={18}
-                  className="group-hover:text-[#9333ea] text-purple-primary transition-transform"
-                />
-                <p className="font-['Liberation_Sans:Bold',sans-serif] text-purple-primary text-xs md:text-sm tracking-[1.2px] uppercase leading-[16px] group-hover:text-[#9333ea]">
-                  {link.label}
-                </p>
-              </a>
-            ))}
+            {SOCIAL_LINKS.filter((link) => link.id !== "email").map((link) => {
+              const Icon = SOCIAL_ICONS[link.id];
+              return (
+                <a
+                  key={link.id}
+                  href={link.url}
+                  target="_blank"
+                  title={link.label}
+                  className="flex items-center justify-center size-10 md:size-12 border border-[#4d4354] hover:border-purple-primary hover:bg-purple-primary/10 transition-all duration-300 group cursor-pointer"
+                >
+                  {Icon && <Icon size={20} className="text-purple-primary" />}
+                </a>
+              );
+            })}
           </div>
         </div>
 
