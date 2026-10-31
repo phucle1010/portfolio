@@ -12,66 +12,63 @@ const roboto = Roboto({
   display: "swap",
 });
 
+const siteUrl = "https://pucklee.io.vn";
+const siteTitle = "Le The Phuc (Pucklee) - Software Engineer";
+const siteDescription =
+  "Le The Phuc (Pucklee) is a Software Engineer in Ho Chi Minh City building web and mobile products with React, Next.js, React Native, NestJS, and AI-powered search and recommendations.";
+
 export const metadata: Metadata = {
   title: {
-    default: "Le The Phuc - Software Engineer",
+    default: siteTitle,
     template: "%s | Le The Phuc",
   },
-  description:
-    "Portfolio of Le The Phuc, a Frontend & Software Engineer specializing in React, Next.js, Node.js, and MySQL. Based in Ho Chi Minh City. Building scalable web applications and turning ideas into working products.",
+  description: siteDescription,
   applicationName: "Le The Phuc",
-  authors: [{ name: "Le The Phuc", url: "https://pucklee.io.vn" }],
+  authors: [{ name: "Le The Phuc", url: siteUrl }],
   creator: "Le The Phuc",
   publisher: "Le The Phuc",
   keywords: [
     "Le The Phuc",
+    "Lê Thế Phúc",
+    "Pucklee",
     "Software Engineer",
+    "Full-Stack Developer",
     "Frontend Developer",
-    "Software Engineer",
-    "React.js",
-    "Next.js",
+    "Backend Developer",
+    "React Developer",
+    "Next.js Developer",
+    "React Native Developer",
+    "NestJS Developer",
     "Node.js",
-    "MySQL",
-    "Web Development",
+    "TypeScript",
+    "AI Engineer",
     "Portfolio",
     "Ho Chi Minh City",
     "Vietnam",
-    "Software Engineer",
-    "JavaScript",
-    "TypeScript",
-    "UI/UX",
-    "Responsive Design",
   ],
   category: "Technology",
   classification: "Portfolio Website",
   openGraph: {
-    type: "website",
-    url: "https://pucklee.io.vn",
-    title: "Le The Phuc - Software Engineer",
-    description:
-      "Portfolio of Le The Phuc, a Frontend & Software Engineer specializing in React, Next.js, Node.js, and MySQL. Building scalable web applications based in Ho Chi Minh City.",
+    type: "profile",
+    url: siteUrl,
+    title: siteTitle,
+    description: siteDescription,
     siteName: "Le The Phuc",
     locale: "en_US",
-    images: [
-      {
-        url: "/opengraph-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Le The Phuc - Software Engineer",
-        type: "image/png",
-      },
-    ],
+    firstName: "Phuc",
+    lastName: "Le The",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Le The Phuc - Software Engineer",
-    description:
-      "Frontend & Software Engineer specializing in React, Next.js, Node.js, and MySQL. Based in Ho Chi Minh City.",
-    images: ["/opengraph-image.png"],
+    title: siteTitle,
+    description: siteDescription,
   },
-  metadataBase: new URL("https://pucklee.io.vn"),
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
+  },
+  metadataBase: new URL(siteUrl),
   alternates: {
-    canonical: "https://pucklee.io.vn",
+    canonical: siteUrl,
   },
   robots: {
     index: true,
@@ -92,7 +89,7 @@ export const metadata: Metadata = {
       { url: "/favicon.svg", type: "image/svg+xml" },
       { url: "/favicon.ico", sizes: "32x32", type: "image/x-icon" },
     ],
-    apple: "/apple-touch-icon.png",
+    apple: "/apple-icon",
   },
 };
 
@@ -107,37 +104,65 @@ export default function RootLayout({
 }>) {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Person",
-    name: "Le The Phuc",
-    jobTitle: "Software Engineer",
-    url: "https://pucklee.io.vn",
-    sameAs: [
-      "https://www.linkedin.com/in/phuc-le-bab721189/",
-      "https://github.com/phucle1010",
-    ],
-    email: "lethephuc2002@gmail.com",
-    telephone: "+84368341595",
-    description:
-      "Software developer specializing in React, Next.js, Node.js, and MySQL. Building scalable web applications and turning ideas into working products.",
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Ho Chi Minh City",
-      addressRegion: "Ho Chi Minh City",
-      addressCountry: "VN",
-    },
-    knowsAbout: [
-      "React.js",
-      "Next.js",
-      "Node.js",
-      "MySQL",
-      "JavaScript",
-      "TypeScript",
-      "Web Development",
-      "Full-Stack Development",
-      "Frontend Development",
-      "Backend Development",
-      "Database Design",
-      "RESTful APIs",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": `${siteUrl}/#website`,
+        url: siteUrl,
+        name: "Le The Phuc",
+        alternateName: ["Pucklee", "PUCKLEE.DEV"],
+        inLanguage: "en",
+      },
+      {
+        "@type": "ProfilePage",
+        "@id": `${siteUrl}/#profile`,
+        url: siteUrl,
+        name: siteTitle,
+        description: siteDescription,
+        isPartOf: { "@id": `${siteUrl}/#website` },
+        mainEntity: { "@id": `${siteUrl}/#person` },
+      },
+      {
+        "@type": "Person",
+        "@id": `${siteUrl}/#person`,
+        name: "Le The Phuc",
+        alternateName: ["Lê Thế Phúc", "Pucklee"],
+        jobTitle: "Software Engineer",
+        url: siteUrl,
+        image: `${siteUrl}/images/avatar.jpg`,
+        sameAs: [
+          "https://www.linkedin.com/in/phuc-le-bab721189/",
+          "https://github.com/phucle1010",
+        ],
+        email: "lethephuc2002@gmail.com",
+        telephone: "+84368341595",
+        description: siteDescription,
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Ho Chi Minh City",
+          addressRegion: "Ho Chi Minh City",
+          addressCountry: "VN",
+        },
+        knowsAbout: [
+          "React",
+          "Next.js",
+          "React Native",
+          "Expo",
+          "TypeScript",
+          "Node.js",
+          "NestJS",
+          "Python",
+          "FastAPI",
+          "MongoDB",
+          "MySQL",
+          "Redis",
+          "Qdrant",
+          "Semantic Search",
+          "Recommendation Systems",
+          "Docker",
+          "Full-Stack Development",
+        ],
+      },
     ],
   };
 

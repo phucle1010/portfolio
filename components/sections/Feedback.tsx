@@ -13,9 +13,9 @@ export function Feedback() {
     <section className="px-6 md:px-[80px] py-20 md:py-40">
       <div className="max-w-[1440px] mx-auto">
         <div className="bg-[#0f0f0f] border border-[#4d4354] p-8 md:p-[97px] relative">
-          <p className="font-['Liberation_Sans:Bold',sans-serif] text-purple-primary text-sm tracking-[1.2px] uppercase leading-[16px] mb-8 md:mb-[48px]">
+          <h2 className="font-['Liberation_Sans:Bold',sans-serif] text-purple-primary text-sm tracking-[1.2px] uppercase leading-[16px] mb-8 md:mb-[48px]">
             04 // FEEDBACK
-          </p>
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12">
             <div className="md:col-span-8">
               <blockquote className="font-['Inter:Italic',sans-serif] text-lg md:text-2xl leading-relaxed md:leading-[45.5px] mb-8 md:mb-12 italic">

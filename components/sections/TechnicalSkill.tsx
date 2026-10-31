@@ -67,9 +67,9 @@ export function TechnicalSKill() {
       className="bg-[#0e0e0e] border-y border-[#4d4354] py-20 md:py-[161px] px-6 md:px-20"
     >
       <div className="max-w-[1440px] mx-auto">
-        <p className="font-['Liberation_Sans:Bold',sans-serif] text-purple-primary text-sm tracking-[1.2px] uppercase text-center leading-[16px] mb-10 md:mb-20">
+        <h2 className="font-['Liberation_Sans:Bold',sans-serif] text-purple-primary text-sm tracking-[1.2px] uppercase text-center leading-[16px] mb-10 md:mb-20">
           03 // TECHNICAL SKILLS
-        </p>
+        </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-px bg-[#4d4354] border border-[#4d4354]">
           {skillGroups.map(({ title, Icon, skills }) => (

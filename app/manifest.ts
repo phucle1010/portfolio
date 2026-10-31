@@ -5,7 +5,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: "Le The Phuc - Software Engineer",
     short_name: "Le The Phuc",
     description:
-      "Portfolio of Le The Phuc, a Frontend & Software Engineer specializing in React, Next.js, Node.js, and MySQL",
+      "Portfolio of Le The Phuc, a Software Engineer building web and mobile products with React, Next.js, React Native, and NestJS",
     start_url: "/",
     display: "standalone",
     background_color: "#0a0f1e",
