@@ -1,5 +1,3 @@
-"use server";
-
 import { Suspense } from "react";
 
 import { GlobalLoading } from "@/components/Loading";
