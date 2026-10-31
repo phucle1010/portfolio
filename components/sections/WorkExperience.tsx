@@ -94,7 +94,7 @@ export function WorkExperience() {
                   Job Tinda
                 </h3>
                 <p className="font-['Liberation_Sans:Regular',sans-serif] text-purple-primary text-[10px] md:text-xs uppercase leading-[15px]">
-                  MOBILE DEVELOPER @ Azubi-in-Germany
+                  Software Engineer @ Azubi-in-Germany
                 </p>
               </div>
 
@@ -180,7 +180,7 @@ export function WorkExperience() {
                   HRCV
                 </h3>
                 <p className="font-['Liberation_Sans:Regular',sans-serif] text-purple-primary text-[10px] md:text-xs uppercase leading-[15px]">
-                  BACKEND DEVELOPER @ Vinpet Solution
+                  Software Engineer @ HRCV
                 </p>
               </div>
 
