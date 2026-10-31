@@ -38,7 +38,7 @@ const skillGroups = [
     skills: [
       "Qdrant Vector Database",
       "Semantic Search & Embeddings",
-      "ONNX Runtime & Cross-Encoder Reranking",
+      "ONNX Runtime Model Inference",
       "Recommendation Engines",
       "LLM Integration (Groq)",
       "Web Crawling (Playwright, Trafilatura)",
