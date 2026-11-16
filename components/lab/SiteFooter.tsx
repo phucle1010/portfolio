@@ -10,7 +10,7 @@ export function SiteFooter() {
     <footer className="border-t border-[#322e26]">
       <div className="mx-auto flex max-w-[1120px] flex-col gap-5 px-5 py-8 md:flex-row md:items-center md:justify-between md:px-8">
         <p className="sans text-[13px] text-[#948c7a]">
-          <span className="text-[#ebe6d8]">Pucklee</span>
+          <span className="text-[#ebe6d8]">{site.name}</span>
           {" — "}
           {site.statement}
         </p>

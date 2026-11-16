@@ -47,23 +47,25 @@ const mono = localFont({
 });
 
 const siteUrl = site.url;
+const siteName = site.name;
 const siteTitle = site.title;
 const siteDescription = site.description;
 
 export const metadata: Metadata = {
   title: {
     default: siteTitle,
-    template: "%s | PUCKLEE",
+    template: `%s | ${siteName}`,
   },
   description: siteDescription,
-  applicationName: "PUCKLEE",
+  applicationName: siteName,
   authors: [{ name: "Le The Phuc", url: siteUrl }],
   creator: "Le The Phuc",
-  publisher: "Le The Phuc",
+  publisher: siteName,
   keywords: [
     "Le The Phuc",
     "Lê Thế Phúc",
     "Pucklee",
+    "PUCKLEE",
     "Software Engineer",
     "Full-Stack Developer",
     "Frontend Developer",
@@ -86,7 +88,7 @@ export const metadata: Metadata = {
     url: siteUrl,
     title: siteTitle,
     description: siteDescription,
-    siteName: "PUCKLEE",
+    siteName,
     locale: "en_US",
     firstName: "Phuc",
     lastName: "Le The",
@@ -143,9 +145,11 @@ export default function RootLayout({
         "@type": "WebSite",
         "@id": `${siteUrl}/#website`,
         url: siteUrl,
-        name: "Le The Phuc",
-        alternateName: ["Pucklee", "PUCKLEE.DEV"],
+        name: siteName,
+        alternateName: [...site.alternateNames],
+        description: siteDescription,
         inLanguage: "en",
+        publisher: { "@id": `${siteUrl}/#person` },
       },
       {
         "@type": "ProfilePage",
@@ -154,13 +158,14 @@ export default function RootLayout({
         name: siteTitle,
         description: siteDescription,
         isPartOf: { "@id": `${siteUrl}/#website` },
+        about: { "@id": `${siteUrl}/#person` },
         mainEntity: { "@id": `${siteUrl}/#person` },
       },
       {
         "@type": "Person",
         "@id": `${siteUrl}/#person`,
         name: "Le The Phuc",
-        alternateName: ["Lê Thế Phúc", "Pucklee"],
+        alternateName: ["Lê Thế Phúc", "Pucklee", "PUCKLEE"],
         jobTitle: "Full-Stack Developer",
         url: siteUrl,
         image: `${siteUrl}/images-v2/profile.png`,

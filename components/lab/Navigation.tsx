@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 
 import { cn } from "@/components/ui/utils";
+import { site } from "@/constants/lab";
 import { primaryClass } from "./classes";
 
 const LINKS = [
@@ -67,7 +68,7 @@ export function Navigation() {
             href={pathname === "/" ? "#hero" : "/"}
             className="sans text-[15px] font-medium tracking-[-0.02em] text-[#ebe6d8]"
           >
-            Pucklee
+            {site.name}
           </a>
 
           <div className="hidden items-center gap-1 md:flex">

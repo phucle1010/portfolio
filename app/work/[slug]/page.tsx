@@ -33,6 +33,7 @@ export async function generateMetadata({
       title,
       description,
       url: `${site.url}/work/${project.slug}`,
+      siteName: site.name,
       type: "article",
       images: [{ url: project.cover.src, alt: project.cover.alt }],
     },
