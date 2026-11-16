@@ -1,8 +1,8 @@
 import { MetadataRoute } from "next";
 
-export default function robots(): MetadataRoute.Robots {
-  const baseUrl = "https://pucklee.io.vn";
+import { site } from "@/constants/lab";
 
+export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
       {
@@ -11,7 +11,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/api/"],
       },
     ],
-    sitemap: `${baseUrl}/sitemap.xml`,
-    host: baseUrl,
+    sitemap: `${site.url}/sitemap.xml`,
+    host: site.url,
   };
 }

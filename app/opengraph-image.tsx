@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "Le The Phuc - Software Engineer";
+export const alt = "Le The Phuc — Full-Stack Developer";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -13,23 +13,43 @@ export default function OpengraphImage() {
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-between",
-        padding: "72px 80px",
-        background: "#000000",
-        color: "#ffffff",
-        borderLeft: "16px solid #a855f7",
+        padding: "64px 72px",
+        background: "#100f0c",
+        color: "#ebe6d8",
+        borderLeft: "12px solid #e8a317",
       }}
     >
-      <div style={{ fontSize: 32, color: "#a855f7", letterSpacing: 2 }}>
-        PUCKLEE.DEV_
+      <div
+        style={{
+          fontSize: 22,
+          color: "#948c7a",
+          letterSpacing: 1,
+        }}
+      >
+        Pucklee
       </div>
-      <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
-        <div style={{ fontSize: 88, fontWeight: 700, letterSpacing: -2 }}>
-          Le The Phuc
+      <div style={{ display: "flex", flexDirection: "column", gap: 18 }}>
+        <div
+          style={{
+            fontSize: 64,
+            fontWeight: 500,
+            letterSpacing: -2,
+            lineHeight: 1.05,
+          }}
+        >
+          I build digital products that scale.
         </div>
-        <div style={{ fontSize: 40, color: "#cfc2d6" }}>Software Engineer</div>
+        <div style={{ fontSize: 26, color: "#948c7a" }}>
+          Le The Phuc · Full-Stack Developer
+        </div>
       </div>
-      <div style={{ fontSize: 28, color: "#9ca3af" }}>
-        React · Next.js · React Native · NestJS · AI Search
+      <div
+        style={{
+          fontSize: 20,
+          color: "#5e584c",
+        }}
+      >
+        SaaS · web applications · AI-powered products
       </div>
     </div>,
     size

@@ -1,29 +1,37 @@
 import type { Metadata, Viewport } from "next";
-import { Roboto } from "next/font/google";
+import { IBM_Plex_Mono, IBM_Plex_Sans } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
 
 import "./globals.css";
+import { projects, site } from "@/constants/lab";
 import { WIDGET_SETTING } from "@/constants/widget";
 import { ToastProvider } from "@/providers/toast";
 
-const roboto = Roboto({
-  variable: "--font-roboto",
+const body = IBM_Plex_Sans({
+  variable: "--font-body",
   subsets: ["latin"],
+  weight: ["400", "500", "600"],
   display: "swap",
 });
 
-const siteUrl = "https://pucklee.io.vn";
-const siteTitle = "Le The Phuc (Pucklee) - Software Engineer";
-const siteDescription =
-  "Le The Phuc (Pucklee) is a Software Engineer in Ho Chi Minh City building web and mobile products with React, Next.js, React Native, NestJS, and AI-powered search and recommendations.";
+const mono = IBM_Plex_Mono({
+  variable: "--font-mono-lab",
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  display: "swap",
+});
+
+const siteUrl = site.url;
+const siteTitle = site.title;
+const siteDescription = site.description;
 
 export const metadata: Metadata = {
   title: {
     default: siteTitle,
-    template: "%s | Le The Phuc",
+    template: "%s | PUCKLEE",
   },
   description: siteDescription,
-  applicationName: "Le The Phuc",
+  applicationName: "PUCKLEE",
   authors: [{ name: "Le The Phuc", url: siteUrl }],
   creator: "Le The Phuc",
   publisher: "Le The Phuc",
@@ -53,7 +61,7 @@ export const metadata: Metadata = {
     url: siteUrl,
     title: siteTitle,
     description: siteDescription,
-    siteName: "Le The Phuc",
+    siteName: "PUCKLEE",
     locale: "en_US",
     firstName: "Phuc",
     lastName: "Le The",
@@ -95,6 +103,7 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   colorScheme: "dark",
+  themeColor: "#100f0c",
 };
 
 export default function RootLayout({
@@ -127,9 +136,9 @@ export default function RootLayout({
         "@id": `${siteUrl}/#person`,
         name: "Le The Phuc",
         alternateName: ["Lê Thế Phúc", "Pucklee"],
-        jobTitle: "Software Engineer",
+        jobTitle: "Full-Stack Developer",
         url: siteUrl,
-        image: `${siteUrl}/images/avatar.jpg`,
+        image: `${siteUrl}/images-v2/profile.png`,
         sameAs: [
           "https://www.linkedin.com/in/phuc-le-bab721189/",
           "https://github.com/phucle1010",
@@ -163,20 +172,32 @@ export default function RootLayout({
           "Full-Stack Development",
         ],
       },
+      {
+        "@type": "ItemList",
+        "@id": `${siteUrl}/#work`,
+        name: "Selected projects",
+        itemListElement: projects.map((project, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          name: project.name,
+          url: `${siteUrl}/work/${project.slug}`,
+        })),
+      },
     ],
   };
 
   return (
-    <html lang="en" className="scroll-smooth">
+    <html
+      lang="en"
+      className={`${body.variable} ${mono.variable} scroll-smooth`}
+    >
       <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body
-        className={`${roboto.variable} antialiased bg-gradient-to-br from-[#050816] via-[#0a0f1e] to-[#050816] text-white min-h-screen`}
-      >
+      <body className="antialiased bg-[#100f0c] text-[#ebe6d8] min-h-screen">
         <ToastProvider>{children}</ToastProvider>
 
         <script

@@ -2,14 +2,14 @@ import { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Le The Phuc - Software Engineer",
-    short_name: "Le The Phuc",
+    name: "Le The Phuc — Full-Stack Developer",
+    short_name: "PUCKLEE",
     description:
-      "Portfolio of Le The Phuc, a Software Engineer building web and mobile products with React, Next.js, React Native, and NestJS",
+      "Portfolio of Le The Phuc, a Full-Stack Developer building SaaS platforms, web applications, and AI-powered products.",
     start_url: "/",
     display: "standalone",
-    background_color: "#0a0f1e",
-    theme_color: "#9333ea",
+    background_color: "#080B14",
+    theme_color: "#080B14",
     icons: [
       {
         src: "/favicon.ico",
