@@ -1,9 +1,12 @@
 export const site = {
   url: "https://pucklee.io.vn",
-  name: "PUCKLEE",
-  title: "Le The Phuc — Full-Stack Developer",
+  /** Google site name + visible brand wordmark */
+  name: "Pucklee",
+  /** Ordered fallbacks for Google when primary name isn't selected */
+  alternateNames: ["PUCKLEE", "Le The Phuc", "pucklee.io.vn"] as const,
+  title: "Le The Phuc (Pucklee) — Full-Stack Developer",
   description:
-    "Le The Phuc (Pucklee) is a Full-Stack Developer in Ho Chi Minh City building SaaS platforms, web applications, and AI-powered products from interface to infrastructure.",
+    "Le The Phuc (Pucklee) is a Full-Stack Developer in Ho Chi Minh City building SaaS, web, and mobile products with React, Next.js, React Native, NestJS, and AI.",
   statement: "Engineering ideas into intelligent digital products.",
 };
 

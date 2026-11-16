@@ -31,6 +31,7 @@ export function CaseStudyView({ project }: { project: LabProject }) {
     name: project.name,
     description: project.summary,
     url: `${site.url}/work/${project.slug}`,
+    isPartOf: { "@id": `${site.url}/#website` },
     creator: { "@id": `${site.url}/#person` },
     about: project.category,
   };
