@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { IBM_Plex_Mono, IBM_Plex_Sans } from "next/font/google";
+import localFont from "next/font/local";
 import { GoogleAnalytics } from "@next/third-parties/google";
 
 import "./globals.css";
@@ -7,17 +7,42 @@ import { projects, site } from "@/constants/lab";
 import { WIDGET_SETTING } from "@/constants/widget";
 import { ToastProvider } from "@/providers/toast";
 
-const body = IBM_Plex_Sans({
+const body = localFont({
+  src: [
+    {
+      path: "./fonts/IBMPlexSans-Regular.woff2",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "./fonts/IBMPlexSans-Medium.woff2",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "./fonts/IBMPlexSans-SemiBold.woff2",
+      weight: "600",
+      style: "normal",
+    },
+  ],
   variable: "--font-body",
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
   display: "swap",
 });
 
-const mono = IBM_Plex_Mono({
+const mono = localFont({
+  src: [
+    {
+      path: "./fonts/IBMPlexMono-Regular.woff2",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "./fonts/IBMPlexMono-Medium.woff2",
+      weight: "500",
+      style: "normal",
+    },
+  ],
   variable: "--font-mono-lab",
-  subsets: ["latin"],
-  weight: ["400", "500"],
   display: "swap",
 });
 
