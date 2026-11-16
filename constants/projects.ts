@@ -38,24 +38,6 @@ export const projects = [
     ],
   },
   {
-    title: "HYP 3 Platform",
-    role: "Frontend Developer @ DTC Labs",
-    image: "/images-v2/projects/hyp3/1.png",
-    imageAlt: "HYP 3 Crypto Platform",
-    cardClassName: "md:col-span-4",
-    imageClassName: "md:h-[414.38px]",
-    description:
-      "A crypto platform combining trading and market news in one place, with Web3 wallet sign-in and a fast, search-friendly interface.",
-    technologies: [
-      "Next.js",
-      "TypeScript",
-      "Tailwind CSS",
-      "Privy",
-      "Web3",
-      "Docker",
-    ],
-  },
-  {
     title: "Job Tinda",
     role: "Software Engineer @ Azubi-in-Germany",
     image: "/images-v2/projects/tinda/4.png",

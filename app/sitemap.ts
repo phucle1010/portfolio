@@ -1,20 +1,21 @@
 import { MetadataRoute } from "next";
 
-import { projects } from "@/constants/projects";
-
-const baseUrl = "https://pucklee.io.vn";
+import { projects, site } from "@/constants/lab";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: baseUrl,
+      url: site.url,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 1,
-      images: [
-        `${baseUrl}/images/avatar.jpg`,
-        ...projects.map((project) => `${baseUrl}${project.image}`),
-      ],
     },
+    ...projects.map((project) => ({
+      url: `${site.url}/work/${project.slug}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+      images: project.images.map((image) => `${site.url}${image.src}`),
+    })),
   ];
 }

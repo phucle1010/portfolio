@@ -1,15 +1,7 @@
-import Image from "next/image";
-
 export function GlobalLoading() {
   return (
-    <div className="w-screen h-screen flex items-center justify-center">
-      <Image
-        className="animate-pulse rounded-xl"
-        src="/images-v2/logo-v2.png"
-        alt="Loading Logo"
-        width={400}
-        height={400}
-      />
+    <div className="flex min-h-screen items-center justify-center bg-[#080B14] text-[#94A3B8]">
+      <p className="text-sm tracking-[0.22em]">PUCKLEE.DEV_</p>
     </div>
   );
 }
